@@ -12,6 +12,7 @@ sections.forEach((section) => {
   const navBarLink = document.createElement("a");
 
   // Modify the properties of the anchor
+  navBarLink.textContent = section.dataset.nav;
   navBarLink.href = `#${section.id}`;
 
   // Add the elements to the HTML
