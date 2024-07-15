@@ -20,6 +20,16 @@ sections.forEach((section) => {
   navBarList.append(navBarItem);
 
 
+/* Active State */
+  document.addEventListener("scroll", () => {
+    const distanceFromTop = section.getBoundingClientRect().top;
+
+    if (distanceFromTop <= 300) {
+      section.classList = ["active"]
+      return
+    }
+    section.classList = []
+  })
 });
 
 
