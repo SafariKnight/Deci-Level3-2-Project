@@ -11,19 +11,17 @@
 /* ---- Base Rules ---- */
 body {
     background: rgb(219, 226, 232);
-    background: linear-gradient(
-        0deg,
-        rgba(219, 226, 232, 1) 0%,
-        rgba(255, 255, 255, 1) 100%
-    );
+    background: linear-gradient(0deg,
+            rgba(219, 226, 232, 1) 0%,
+            rgba(255, 255, 255, 1) 100%);
     margin: 0;
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
     color: #171a53;
 }
 
 /* Typeography General*/
 h1 {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
 }
@@ -37,13 +35,19 @@ h1 {
 
 h2 {
     border-bottom: 3px solid #b181ff;
-    font-family: 'Oxygen', Sans-Serif;
+    font-family: "Oxygen", Sans-Serif;
     font-size: 3em;
 }
 
 p {
     line-height: 1.6em;
 }
+
+a {
+    color: #171a53;
+    text-decoration: none;
+}
+
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 10vh;
@@ -130,13 +134,11 @@ section:nth-of-type(even) .landing__container {
 /* Note that background circles are created with psuedo elements before and after */
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
 section:nth-of-type(odd) .landing__container::before {
-    content: '';
+    content: "";
     background: rgba(189, 234, 9, 0.8);
-    background: linear-gradient(
-        0deg,
-        rgba(189, 234, 9, 0.5) 0%,
-        rgba(189, 234, 9, 1) 100%
-    );
+    background: linear-gradient(0deg,
+            rgba(189, 234, 9, 0.5) 0%,
+            rgba(189, 234, 9, 1) 100%);
     position: absolute;
     z-index: -5;
     width: 20vh;
@@ -147,13 +149,11 @@ section:nth-of-type(odd) .landing__container::before {
 }
 
 section:nth-of-type(even) .landing__container::before {
-    content: '';
+    content: "";
     background: rgb(101, 151, 255);
-    background: linear-gradient(
-        0deg,
-        rgba(101, 151, 255, 0.5) 0%,
-        rgba(101, 151, 255, 1) 100%
-    );
+    background: linear-gradient(0deg,
+            rgba(101, 151, 255, 0.5) 0%,
+            rgba(101, 151, 255, 1) 100%);
     position: absolute;
     top: 3em;
     right: 3em;
@@ -166,13 +166,11 @@ section:nth-of-type(even) .landing__container::before {
 }
 
 section:nth-of-type(even) .landing__container::after {
-    content: '';
+    content: "";
     background: rgb(177, 129, 255);
-    background: linear-gradient(
-        0deg,
-        rgba(177, 129, 255, 0.5) 0%,
-        rgba(177, 129, 255, 1) 100%
-    );
+    background: linear-gradient(0deg,
+            rgba(177, 129, 255, 0.5) 0%,
+            rgba(177, 129, 255, 1) 100%);
     position: absolute;
     left: 3em;
     bottom: -1em;
@@ -185,13 +183,11 @@ section:nth-of-type(even) .landing__container::after {
 }
 
 section:nth-of-type(3n) .landing__container::after {
-    content: '';
+    content: "";
     background: rgb(32, 21, 255);
-    background: linear-gradient(
-        0deg,
-        rgba(32, 21, 255, 0.5) 0%,
-        rgba(32, 21, 255, 1) 100%
-    );
+    background: linear-gradient(0deg,
+            rgba(32, 21, 255, 0.5) 0%,
+            rgba(32, 21, 255, 1) 100%);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -204,13 +200,11 @@ section:nth-of-type(3n) .landing__container::after {
 }
 
 section:nth-of-type(3n + 1) .landing__container::after {
-    content: '';
+    content: "";
     background: rgb(10, 197, 161);
-    background: linear-gradient(
-        0deg,
-        rgba(10, 197, 161, 0.5) 0%,
-        rgba(10, 197, 161, 1) 100%
-    );
+    background: linear-gradient(0deg,
+            rgba(10, 197, 161, 0.5) 0%,
+            rgba(10, 197, 161, 1) 100%);
     position: absolute;
     right: 20vw;
     bottom: -5em;
@@ -223,13 +217,11 @@ section:nth-of-type(3n + 1) .landing__container::after {
 }
 
 section:nth-of-type(5n) .landing__container::after {
-    content: '';
+    content: "";
     background: rgb(177, 129, 255);
-    background: linear-gradient(
-        0deg,
-        rgba(177, 129, 255, 0.5) 0%,
-        rgba(177, 129, 255, 1) 100%
-    );
+    background: linear-gradient(0deg,
+            rgba(177, 129, 255, 0.5) 0%,
+            rgba(177, 129, 255, 1) 100%);
     position: absolute;
     right: 20vw;
     bottom: -5em;
@@ -246,11 +238,9 @@ section:nth-of-type(5n) .landing__container::after {
 /* Note: .active class is applied through javascript and is not found in index.html */
 section.active {
     background: rgb(0, 0, 0);
-    background: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 0) 100%
-    );
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0) 100%);
 }
 
 section.active .landing__container::before {
@@ -268,6 +258,7 @@ section.active .landing__container::after {
     from {
         transform: rotate(0deg) translate(-1em) rotate(0deg);
     }
+
     to {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
     }
