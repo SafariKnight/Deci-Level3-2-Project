@@ -9,6 +9,11 @@
 */
 
 /* ---- Base Rules ---- */
+:root {
+    --clr-accent-dark: #0900c1;
+    --clr-accent: #2015ff;
+}
+
 body {
     background: rgb(219, 226, 232);
     background: linear-gradient(0deg,
@@ -17,6 +22,38 @@ body {
     margin: 0;
     font-family: "Merriweather", serif;
     color: #171a53;
+}
+
+button,
+input {
+    border-radius: 5rem;
+    border: none;
+    outline: solid 1px black;
+    padding-inline: 1.125rem;
+    font-size: 1.1em;
+    background: white;
+}
+
+button:hover {
+    background: var(--clr-accent);
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+button:active {
+    background: var(--clr-accent-dark);
+    transition: none;
+}
+
+textarea {
+    border: none;
+    border-radius: 1rem;
+    padding-inline: 0.875rem;
+    padding-block: 0.5rem;
+    overflow: hidden;
+    outline: solid 1px black;
+    font-size: 1.2em;
+    resize: none;
 }
 
 /* Typeography General*/
@@ -85,7 +122,7 @@ section {
 }
 
 .navbar__menu .menu__link:hover {
-    background: #2015ff;
+    background: var(--clr-accent);
     color: #fff;
     transition: ease 0.3s all;
 }
@@ -94,6 +131,8 @@ section {
 .page__header {
     background: #fff;
     position: fixed;
+    /* display: flex; */
+    /* justify-content: space-between; */
     top: 0;
     width: 100%;
     z-index: 5;
@@ -108,6 +147,75 @@ section {
 
 .page__footer p {
     color: #fff;
+}
+
+/* Comment Form Styles */
+.comments__section>.comments__input {
+    display: grid;
+    row-gap: 1rem;
+    grid-template-columns: 5rem min(1fr, 20rem);
+    grid-template-rows: 2.5rem 2.5rem minmax(20rem, 1fr) 3rem;
+}
+
+.comments__section label {
+    grid-column: 0;
+    justify-self: end;
+    align-self: center;
+    margin-right: 1rem;
+}
+
+.comments__section button,
+.comments__section textarea,
+.comments__section h2 {
+    grid-column: span 2;
+}
+
+.comments__section input {
+    max-width: 20rem;
+}
+
+/* Comment Styles */
+
+
+.comment__container {
+    margin-top: 1rem;
+}
+
+.comment__content {
+    max-width: 80ch;
+    margin-inline: auto;
+    padding-inline: 1rem;
+
+    border-radius: 10px;
+    border: 2px gray solid;
+    background: #d2dbe2;
+}
+
+.comment__author {
+    display: flex;
+
+    border-bottom: 2px rgb(128 128 128 / 0.25) solid;
+}
+
+.author__info {
+    display: flex;
+}
+
+.author__name {
+    font-family: system-ui;
+    font-size: 1.2em;
+}
+
+.author__email {
+    color: gray;
+    font-size: 0.5em;
+    margin-block: auto;
+    margin-left: 0.25rem;
+}
+
+.comment__text {
+    margin: 0;
+    padding-block: 1rem;
 }
 
 /* ---- Theme Rules ---- */

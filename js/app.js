@@ -14,6 +14,7 @@ sections.forEach((section) => {
   // Modify the properties of the anchor
   navBarLink.textContent = section.dataset.nav;
   navBarLink.href = `#${section.id}`;
+  navBarLink.className = "menu__link"
 
   // Add the elements to the HTML
   navBarItem.append(navBarLink);
@@ -24,11 +25,11 @@ sections.forEach((section) => {
   document.addEventListener("scroll", () => {
     const distanceFromTop = section.getBoundingClientRect().top;
 
-    if (distanceFromTop <= 300) {
-      section.classList = ["active"]
+    if (distanceFromTop <= 300 && distanceFromTop > 0) {
+      section.classList.add("active")
       return
     }
-    section.classList = []
+    section.classList.remove("active")
   })
 });
 
@@ -46,6 +47,6 @@ navBarList.addEventListener("click", (e) => {
     .scrollIntoView({ behavior: "smooth" }); // Scroll untili the section is visible (`{ behaviour: "smooth"}` ensures it scrolls to it smoothly)
 });
 
+/* Comment Form */
 
 
-/** TODO: Add a comment form **/

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -18,6 +18,7 @@
   <!-- HTML Follows BEM naming conventions
   IDs are only used for sections to connect menu achors to sections -->
   <header class="page__header">
+    <!-- <span class="header__logged-in">Logged in as <span class="header__account"></span></span> -->
     <nav class="navbar__menu">
       <!-- Navigation starts as empty UL that will be populated with JS -->
       <ul id="navbar__list"></ul>
@@ -133,6 +134,58 @@
           consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
           elementum tortor mollis non.
         </p>
+      </div>
+    </section>
+
+    <section id="comment" data-nav="Comment" class="comments__section">
+      <h2>Comment</h2>
+      <form class="comments__input">
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+        <label for="name">Email</label>
+        <input type="text" id="email" />
+        <textarea name="comment" id="comment-text"></textarea>
+
+        <button class="comments__submit">Submit</button>
+      </form>
+
+      <div class="comments__box">
+        <div class="comment__container">
+          <div class="comment__content">
+            <div class="comment__author">
+              <div class="author__info">
+                <p class="author__name">Kareem Hisham</p>
+                <p class="author__email">(safariknight2@gmail.com)</p>
+              </div>
+            </div>
+            <p class="comment__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Obcaecati, voluptatibus neque. Asperiores autem aut libero
+              adipisci sequi nam odit, pariatur quae, perspiciatis obcaecati
+              voluptatum amet. Impedit, inventore perspiciatis. Debitis enim
+              quia nam asperiores tempore quasi nulla, fuga aspernatur in
+              tempora eius veniam excepturi magni amet veritatis ipsa harum
+              adipisci aperiam eveniet voluptates eum quibusdam. Repellat eum
+              tempora vel fuga rerum provident quas. Sunt autem tempore ipsa
+              dolor sequi consequatur, eligendi non praesentium vel velit
+              laborum beatae suscipit accusamus iste aperiam delectus rerum
+              minus, cumque nemo laboriosam? Explicabo similique ab, ullam
+              fugiat rerum laborum minima porro ad adipisci laudantium animi
+              odio illo, nihil cum facere quaerat magnam velit libero, quia
+              possimus aliquam dolorum nemo sunt quam? Esse sunt praesentium
+              incidunt quaerat, veritatis debitis quisquam accusamus harum
+              iure libero sint aliquid nisi animi. Voluptates, incidunt. Esse
+              eligendi nihil, quisquam magni modi non voluptates ipsa
+              voluptatem. Ullam modi iste sed reprehenderit eos repellat
+              quisquam expedita ut libero quibusdam magnam, quidem laudantium
+              ad, perferendis qui possimus doloremque quas? Reiciendis minus
+              reprehenderit ipsa dolor minima sunt? Sed, animi ea! Quod
+              tempore ut, facere illum quos repellendus temporibus esse iste.
+              Dignissimos qui omnis dolore? Laudantium veniam ipsum fugit
+              maxime ex, error tempore ducimus corrupti inventore earum!
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
