@@ -5,7 +5,6 @@
  * For simplicity, no reset or normalize is added.
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
- * TODO: Feel free to make any changes you'd like to personalize your project. Alternatively,  * you can start from scratch!
 */
 
 /* ---- Base Rules ---- */
@@ -32,6 +31,7 @@ input {
     padding-inline: 1.125rem;
     font-size: 1.1em;
     background: white;
+    color: #171a53;
 }
 
 button:hover {
@@ -54,6 +54,10 @@ textarea {
     outline: solid 1px black;
     font-size: 1.2em;
     resize: none;
+}
+
+.inactive {
+    display: none;
 }
 
 /* Typeography General*/
@@ -150,7 +154,7 @@ section {
 }
 
 /* Comment Form Styles */
-.comments__section>.comments__input {
+.comments__section > .comments__form {
     display: grid;
     row-gap: 1rem;
     grid-template-columns: 5rem min(1fr, 20rem);
@@ -371,5 +375,3 @@ section.active .landing__container::after {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
     }
 }
-
-/* TODO: Add styles for Comments section and form */

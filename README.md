@@ -4,10 +4,20 @@ This project requires you to build a multi-section landing page, with a dynamica
 
 ---
 
-## Instructions
+## How to Run
+- Open the index.html in the root of the project
 
-The starter project has some HTML and CSS styling to display a static version of the Dynamic Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Technologies Used
+- HTML
+  - Adding Content the the page
+- CSS
+  - Positioning Elements
+  - Creating a layout
+  - Styling the Elements
+- JS
+  - Adding functionality to the Page
+  - Navigation Bar
+  - Smooth Scrolling
+  - Active State
+  - Comments Form
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For more detailed requirements, see the project instructions in the Udacity Classroom.

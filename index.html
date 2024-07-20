@@ -32,7 +32,7 @@
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1">
+    <section class="active" id="section1" data-nav="Section 1">
       <div class="landing__container">
         <h2>Section 1</h2>
         <p>
@@ -139,63 +139,21 @@
 
     <section id="comment" data-nav="Comment" class="comments__section">
       <h2>Comment</h2>
-      <form class="comments__input">
+      <form class="comments__form">
         <label for="name">Name</label>
-        <input type="text" id="name" />
-        <label for="name">Email</label>
-        <input type="text" id="email" />
-        <textarea name="comment" id="comment-text"></textarea>
+        <input type="text" class="input__name" id="name" />
+        <label for="email">Email</label>
+        <input type="text" class="input__email" id="email" />
+        <textarea name="comment" class="input__text"></textarea>
 
-        <button class="comments__submit">Submit</button>
+        <button class="comments__submit" type="submit">Submit</button>
       </form>
 
-      <div class="comments__box">
-        <div class="comment__container">
-          <div class="comment__content">
-            <div class="comment__author">
-              <div class="author__info">
-                <p class="author__name">Kareem Hisham</p>
-                <p class="author__email">(safariknight2@gmail.com)</p>
-              </div>
-            </div>
-            <p class="comment__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Obcaecati, voluptatibus neque. Asperiores autem aut libero
-              adipisci sequi nam odit, pariatur quae, perspiciatis obcaecati
-              voluptatum amet. Impedit, inventore perspiciatis. Debitis enim
-              quia nam asperiores tempore quasi nulla, fuga aspernatur in
-              tempora eius veniam excepturi magni amet veritatis ipsa harum
-              adipisci aperiam eveniet voluptates eum quibusdam. Repellat eum
-              tempora vel fuga rerum provident quas. Sunt autem tempore ipsa
-              dolor sequi consequatur, eligendi non praesentium vel velit
-              laborum beatae suscipit accusamus iste aperiam delectus rerum
-              minus, cumque nemo laboriosam? Explicabo similique ab, ullam
-              fugiat rerum laborum minima porro ad adipisci laudantium animi
-              odio illo, nihil cum facere quaerat magnam velit libero, quia
-              possimus aliquam dolorum nemo sunt quam? Esse sunt praesentium
-              incidunt quaerat, veritatis debitis quisquam accusamus harum
-              iure libero sint aliquid nisi animi. Voluptates, incidunt. Esse
-              eligendi nihil, quisquam magni modi non voluptates ipsa
-              voluptatem. Ullam modi iste sed reprehenderit eos repellat
-              quisquam expedita ut libero quibusdam magnam, quidem laudantium
-              ad, perferendis qui possimus doloremque quas? Reiciendis minus
-              reprehenderit ipsa dolor minima sunt? Sed, animi ea! Quod
-              tempore ut, facere illum quos repellendus temporibus esse iste.
-              Dignissimos qui omnis dolore? Laudantium veniam ipsum fugit
-              maxime ex, error tempore ducimus corrupti inventore earum!
-            </p>
-          </div>
-        </div>
-      </div>
+      <div class="comments__box"></div>
     </section>
   </main>
   <footer class="page__footer">
     <p>&copy Udacity</p>
   </footer>
 </body>
-<!-- TODO:
-  - Load the JavaScript file
-  - Add one or more new sections to the page
--->
-
 </html>
