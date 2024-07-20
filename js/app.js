@@ -70,7 +70,6 @@ const validationStatus = {
 const authorName = document.querySelector(".input__name");
 const authorEmail = document.querySelector(".input__email");
 const commentText = document.querySelector(".input__text");
-const comments = [];
 
 // Converts the form inputs into a status code
 function validateForm() {
@@ -87,20 +86,20 @@ function handleForm(errorValue) {
   switch (errorValue) {
     case validationStatus.emptyName:
       authorName.placeholder = "Input your Name";
-      alert("Input your Name")
+      alert("Input your Name");
       return false;
     case validationStatus.emptyEmail:
       authorEmail.placeholder = "Input your Email";
-      alert("Input your Email")
+      alert("Input your Email");
       return false;
     case validationStatus.emptyComment:
       commentText.placeholder = "Enter a Comment";
-      alert("Input a Comment")
+      alert("Input a Comment");
       return false;
     case validationStatus.invalidEmail:
       authorEmail.value = "";
       authorEmail.placeholder = "Input a valid Email";
-      alert("Input a Valid Email")
+      alert("Input a Valid Email");
       return false;
     case validationStatus.success:
       return true;
@@ -130,6 +129,10 @@ function updateComments() {
   });
 }
 
+
+const comments = JSON.parse(localStorage.getItem("comments")) || [];
+updateComments();
+
 // Handles submitting the form
 document.querySelector(".comments__form").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -141,11 +144,11 @@ document.querySelector(".comments__form").addEventListener("submit", (e) => {
         commentText.value,
       ),
     );
+    localStorage.setItem("comments", JSON.stringify(comments));
+    updateComments();
+    // Clear the form after submitting
+    authorName.value = "";
+    authorEmail.value = "";
+    commentText.value = "";
   }
-  console.log(comments);
-  updateComments();
-  // Clear the form after submitting
-  authorName.value = "";
-  authorEmail.value = "";
-  commentText.value = "";
 });
